@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Elevated Images</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li>
+        <a href="#home">home</a>
+      </li>
+      <li>
+        <a href="#about">about</a>
+      </li>
+      <li>
+        <a href="#work">work</a>
+      </li>
+      <li>
+        <a href="#contact">contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="banner" id="home">
+    <img src="Images/dronepic_slideshow_04.jpg" />
+    <div id="text">
+      <h1>Elevated<br />Images</h1>
+      <hr />
+      <h3>Cool and hip tagline</h3>
+    </div>
+  </div>
+  <div id="about">
+    <h3>About Us</h3>
+    <p style="margin-bottom:40px">
+      Short but precise description of the company. What we do, how we do it, etc...<br />
+      I'll leave this one up to Jonny boy, but it should be enough to tell any given person<br />
+      exactly what we do. Nobody should read this and still be thinking, "what is it these people do?"
+    </p>
+    <div id="portrait-cont">
+      <div id="portrait1">
+      </div>
+      <div id="portrait-desc" style="margin-bottom:90px;">
+        <p>
+          Ben Lusted is the principle operator of Elevated Images. He is a young, dynamic and talented entrepreneur.
+          Since a young age Ben has been techincally inclined. Making electronic music and video games in his early teens before heading to Vancouver at 17 to the Vancouver Film School where he got his sound engineer qualification.
+          Ben was hired by <a target="_blank" href="https://www.ea.com/en-ca">Electronic Arts</a> in Vancouver and worked on the sound design for the Need for Speed video game. His next big project pre-pandemic was the sound design for a XBOX
+          bestseller,
+          Shotgun Farmers.
+          Now he is back in his hometown of Summerland and finding opportunities to start his own business. He has invested in a drone and right out of the box has put his tech skills to use and has been taking amazing stills and videos of his
+          hometown splendour.
+          Ben can get angles and panoramics of any structure or landscape to impress the most detailed client. He can take a drone video and edit it to a clients requirements - all in a timely professional manner.
+          He is looking forward to working with a diverse clientele in the Okanagan Valley who are looking for drone images and videos and showing off his droning talents.
+        </p>
+      </div>
+
+      <div id="portrait2">
+      </div>
+      <div id="portrait-desc" style="margin-top:40px; margin-bottom:40px;">
+        <p>
+          John Lusted is Ben’s Dad and is assisting Ben to get Elevated Images, their drone image and video business off the ground in the Okanagan.
+
+          John’s background is not technology like Bens but he has set up a number of businesses in the last 25 years. His biggest success being a small chain of nursing homes in Summerland, Penticton and Oliver between 1997 and 2007.
+
+          After a 4 year stint in Vancouver where he managed a growing swimming pool service and maintenance business, like Ben he too has returned to the Okanagan and is pursuing business ideas including the drone image and video business.
+
+          John has such confidence in Ben’s ability as a young entrepreneur he sees his assistant role not lasting very long and will need to find other ventures soon. But for now he is Ben’s wingman - no pun intended!
+
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="work">
+    <h3>Our Work</h3>
+    <div id="slideshow-container">
+      <div class="mySlides fade">
+        <img src="Images/dronepic_slideshow_01.png" style="width:100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/dronepic_slideshow_02.png" style="width:100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/dronepic_site_header.png" style="width:100%" />
+      </div>
+    </div>
+    <br />
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+  <div id="contact">
+    <h3>Contact Us</h3>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTw8aX8h0a0lJTD8RvVB9n1BGt_D1QCye1_mjYOzERtjUmNA/viewform?embedded=true" width="640" height="1080" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <div id="footer">
+    <a href=""><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-instagram"></i></a>
+    <a href=""><i class="fab fa-facebook-f"></i></a>
+    <a href=""><i class="fab fa-linkedin-in"></i></a>
+    <h4><i class="far fa-copyright"></i> ELEVATED IMAGES 2021</h4>
+  </div>
+
+  <script>
+    slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+</body>
+
+
+
+</html>
