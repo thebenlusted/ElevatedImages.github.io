@@ -29,7 +29,7 @@
     </ul>
   </div>
   <div class="banner" id="home">
-    <img src="Images/dronepic_slideshow_04.jpg" />
+    <img src="Images/dronepic_site_header.png" />
     <div id="text">
       <h1>Elevated<br />Images</h1>
       <hr />
@@ -79,7 +79,7 @@
   </div>
   <div id="work">
     <h3>Our Work</h3>
-    <div id="slideshow-container">
+    <div id="slideshow-container" style="display:none;">
       <div class="mySlides fade">
         <img src="Images/dronepic_slideshow_01.png" style="width:100%" />
       </div>
@@ -91,10 +91,29 @@
       </div>
     </div>
     <br />
-    <div style="text-align:center">
+    <div style="text-align:center; display:none;">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
+    </div>
+    <div id="image-gallery">
+      <img id="expandedImg" />
+    </div>
+    <div class="img-cont">
+      <div class="row">
+        <div class="col">
+          <img src="Images/dronepic_slideshow_01.png" alt="Drone Picture" onclick="myFunction(this);" />
+        </div>
+        <div class="col">
+          <img src="Images/dronepic_slideshow_02.png" alt="Drone Picture" onclick="myFunction(this);" />
+        </div>
+        <div class="col">
+          <img src="Images/dronepic_slideshow_03.png" alt="Drone Picture" onclick="myFunction(this);" />
+        </div>
+        <div class="col">
+          <img src="Images/dronepic_slideshow_04.png" alt="Drone Picture" onclick="myFunction(this);" />
+        </div>
+      </div>
     </div>
   </div>
   <div id="contact">
@@ -131,6 +150,12 @@
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
       setTimeout(showSlides, 3000);
+    }
+
+    function myFunction(imgs) {
+      var expandedImg = document.getElementById("expandedImg");
+      expandedImg.src = imgs.src;
+      expandedImg.parentElement.style.display = "block";
     }
   </script>
 </body>

@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 html{
   scroll-behavior: smooth;
   margin:0;
@@ -141,6 +145,36 @@ body{
   margin-top:480px;
   text-align: center;
 }
+
+.img-cont{
+  margin:0 80px 0 80px;
+}
+.col{
+  width:10vw;
+  height:10vw;
+  overflow: hidden;
+  float:left;
+  margin-top:20px;
+}
+#expandedImg{
+  width:90%;
+  height:auto;
+  overflow: hidden;
+}
+.col img{
+  cursor:pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.col img:hover{
+  opacity: 1;
+}
+.row:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
 #work h3{
   font-family: Lexend;
   font-size:4vw;
